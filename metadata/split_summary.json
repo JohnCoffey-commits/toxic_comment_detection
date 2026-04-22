@@ -1,0 +1,18 @@
+{
+  "jigsaw": {
+    "counts": {
+      "test": 23897,
+      "train": 111519,
+      "val": 23897
+    },
+    "method": "two-stage StratifiedShuffleSplit",
+    "random_seed_stage_1": 42,
+    "random_seed_stage_2": 43,
+    "stratify_column": "binary_label",
+    "target_ratio": {
+      "test": 0.15,
+      "train": 0.7,
+      "val": 0.15
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "civil_comments": {},
+  "identity": {
+    "column": "has_identity_term",
+    "identity_columns_used": [],
+    "identity_threshold": null,
+    "lexicon_terms": [
+      "asian",
+      "atheist",
+      "bisexual",
+      "black",
+      "buddhist",
+      "christian",
+      "disabled",
+      "disability",
+      "female",
+      "gay",
+      "heterosexual",
+      "hindu",
+      "homosexual",
+      "jewish",
+      "latino",
+      "lesbian",
+      "male",
+      "muslim",
+      "psychiatric",
+      "queer",
+      "trans",
+      "transgender",
+      "white",
+      "woman",
+      "women",
+      "man",
+      "men"
+    ],
+    "method": "rule_based_identity_lexicon"
+  },
+  "implicit_proxy": {
+    "column": "implicit_proxy",
+    "explicit_lexicon_terms": [
+      "asshole",
+      "bastard",
+      "bitch",
+      "bullshit",
+      "cunt",
+      "dick",
+      "dumbass",
+      "fuck",
+      "idiot",
+      "moron",
+      "shit",
+      "slut",
+      "whore"
+    ],
+    "is_gold_label": false,
+    "method": "binary_label == 1 and no explicit term from a small transparent profanity lexicon"
+  },
+  "length_bucket": {
+    "method": "empirical Jigsaw word-length quantiles",
+    "thresholds": {
+      "medium_max_word_len": 56,
+      "short_max_word_len": 22
+    }
+  },
+  "obfuscation": {
+    "column": "has_obfuscation",
+    "heuristics": [
+      "symbols inserted inside words",
+      "leetspeak-like substitutions",
+      "three or more repeated alphabetic characters",
+      "split abusive words with punctuation or symbols between characters"
+    ],
+    "method": "rule_based_obfuscation_heuristics"
+  }
+}

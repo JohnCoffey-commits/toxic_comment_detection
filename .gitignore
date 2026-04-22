@@ -1,0 +1,10 @@
+dataset/
+
+data/processed/jigsaw_train.csv
+data/processed/jigsaw_obfuscation_slice.csv
+data/processed/jigsaw_train.parquet
+data/processed/jigsaw_obfuscation_slice.parquet
+data/processed/train.csv
+
+__pycache__/
+.DS_Store

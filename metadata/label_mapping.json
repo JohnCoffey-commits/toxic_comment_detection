@@ -1,0 +1,20 @@
+{
+  "civil_comments": {
+    "mapping_logic": "binary_label = 1 if toxicity score >= threshold else 0",
+    "present": false,
+    "source_column_used": null,
+    "threshold_used": 0.5
+  },
+  "jigsaw": {
+    "mapping_logic": "binary_label = 1 if any source toxicity column is > 0 else 0",
+    "source_columns_used": [
+      "toxic",
+      "severe_toxic",
+      "obscene",
+      "threat",
+      "insult",
+      "identity_hate"
+    ],
+    "threshold_used": null
+  }
+}
