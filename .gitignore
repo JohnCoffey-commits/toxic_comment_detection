@@ -8,3 +8,20 @@ data/processed/train.csv
 
 __pycache__/
 .DS_Store
+
+# Comment Safety Monitor app: generated/local runtime files
+comment_safety_monitor_app/.venv-inference/
+comment_safety_monitor_app/**/__pycache__/
+comment_safety_monitor_app/frontend/node_modules/
+comment_safety_monitor_app/frontend/dist/
+comment_safety_monitor_app/.web-*.log
+comment_safety_monitor_app/.web-*.pid
+
+# Research/test artifacts kept locally but not needed for app deployment
+comment_safety_monitor_app/model_training*.ipynb
+comment_safety_monitor_app/test_data/
+comment_safety_monitor_app/test_outputs/
+comment_safety_monitor_app/test_reports/
+
+# Exceeds GitHub's normal 100 MB file limit; use Git LFS or external model storage.
+comment_safety_monitor_app/model/distilbert_model/model.safetensors
