@@ -103,6 +103,31 @@ http://localhost:5173
 During local development, `/api` requests are proxied to the FastAPI backend on
 port `8000`.
 
+## Production Deployment
+
+The current production setup uses:
+
+- Vercel for the React frontend:
+  `https://comment-safety-monitor.vercel.app`
+- Hugging Face Spaces for the FastAPI inference backend:
+  `https://johnzpx-comment-safety-monitor-api.hf.space`
+
+The frontend must be built with:
+
+```bash
+VITE_API_BASE_URL=https://johnzpx-comment-safety-monitor-api.hf.space
+```
+
+The Hugging Face Space deployment template lives in:
+
+```text
+comment_safety_monitor_app/hf_space/
+```
+
+Use `requirements-hf-space.txt` as the Space `requirements.txt`. The Dockerfile
+installs the CPU PyTorch wheel separately so the Space does not pull large CUDA
+runtime packages.
+
 ## Supported File Formats
 
 - CSV

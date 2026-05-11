@@ -18,7 +18,9 @@ app.add_middleware(
         "http://127.0.0.1:5173",
         "http://localhost:4173",
         "http://127.0.0.1:4173",
+        "https://comment-safety-monitor.vercel.app",
     ],
+    allow_origin_regex=r"https://comment-safety-monitor.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -32,6 +34,11 @@ class AnalyzeTextRequest(BaseModel):
 @app.get("/api/health")
 def health() -> dict[str, str]:
     return {"status": "ok", "service": "Comment Safety Monitor"}
+
+
+@app.get("/")
+def root() -> dict[str, str]:
+    return health()
 
 
 @app.post("/api/analyze-text")

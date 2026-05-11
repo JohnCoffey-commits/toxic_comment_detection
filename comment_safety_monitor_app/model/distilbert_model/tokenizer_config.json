@@ -14,7 +14,7 @@
   "stride": 0,
   "strip_accents": null,
   "tokenize_chinese_chars": true,
-  "tokenizer_class": "TokenizersBackend",
+  "tokenizer_class": "DistilBertTokenizerFast",
   "truncation_side": "right",
   "truncation_strategy": "longest_first",
   "unk_token": "[UNK]"
